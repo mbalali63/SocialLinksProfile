@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --darkGrey: hsl(0, 0%, 12%);
+  --offBlack: hsl(0, 0%, 8%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: "Inter-bold";
+  src: url('./../src/assets/fonts/static/Inter-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Inter";
+  src: url('./../src/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Inter-semi-bold";
+  src: url('./../src/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+}
+
+body {
+  width: 100%;
+  background-color: var(--offBlack);
+  font-family: "Inter";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main{
+  background-color: var(--darkGrey);
+  padding: 25px 30px;
+  margin: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+
+#header-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;  
+}
+
+
+
+#avatar-container{
+  width: 25%;
+}
+
+#avatar-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#header-section h1{
+  font-size: 22px;
+  font-family: "Inter-semi-bold";
+  color: var(--white);
+  margin-top: 25px;
+}
+#header-section h2{
+  font-family: "Inter-semi-bold";
+  font-size: 13px;
+  color:var(--green);
+  margin-top: 10px;
+}
+
+
+#header-section p{
+  font-size: 14px;
+  color: var(--white);
+  margin: 40px 0 20px 0;
+}
+
+#social-button-set{
+  list-style-type: none;
+  width: 100%;  
+}
+.social-button{
+  width: 100%;
+  padding: 15px 0;  
+  margin: 10px 0;
+  columns: var(--white);
+  background-color: var(--grey);
+  color: var(--white);
+  font-family: "Inter-bold";
+  font-size: 14px;
+  border:none;
+  border-radius: 10px;  
+  cursor: pointer;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  
+}
+
+.social-button:hover{
+  background-color: var(--green);
+  color:#000;
+}
+
+
+
+@media screen and (min-width:400px) {
+  
+  main{
+    padding: 25px 30px;
+    margin: 100px 20px;
+    max-width: 400px;
+  }
+ 
 }
